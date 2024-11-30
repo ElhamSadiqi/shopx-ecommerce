@@ -1,0 +1,235 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #121212fa; /* Dark background */
+}
+
+.shop-name {
+  font-family: 'Playfair Display', serif; /* Elegant and italic font */
+  font-size: 2.5em;
+  font-weight: 400;  /* Light weight for a clean and modern look */
+  color: #ffcc00; /* You can adjust the color to fit your design */
+  font-style: italic; /* Italic for that elegant touch */
+  letter-spacing: 2px; /* Slight spacing to make it feel airy and refined */
+}
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #00000025;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logo h2 {
+  font-size: 1.8em;
+}
+
+/* Navigation Sign-In Button */
+.signin-button {
+  padding: 8px 16px;
+  background-color: #1c1c1c;  /* Dark blue background */
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.signin-button:hover {
+  background-color: #444444;  /* Darker blue on hover */
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  background-color: rgba(37, 37, 37, 0); /* Dark background */
+  padding: 140px 20px;
+  text-align: center;
+  height: 200px;
+  opacity: 0; /* Start with the banner invisible */
+  animation: fadeInUp 1.5s ease-out forwards; /* Apply the animation */
+}
+
+.welcome-banner .h1 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.welcome-banner .h2 {
+  font-size: 1.2em;
+  color: #bbb;
+}
+
+/* Keyframes for the Fade-In and Slide-Up Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
+/* Features Section */
+.features-section {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.feature {
+  padding-top: 15px;
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white with dark theme */
+  text-align: center;
+  max-width: 250px;
+  width: 220px;
+  height: 220px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Slight, permanent shadow */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.feature img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #bbb;
+}
+
+/* Hover Effect */
+.feature:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Feature Icon Styles */
+.feature-icon {
+  font-size: 50px;  /* Set the size of the icons */
+  color: #ffcc00; /* Icon color */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.feature-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Keyframes for the Fade-In and Slide-Up Animation for Features */
+@keyframes fadeInUpFeature {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
+/* Features Section */
+.features-section {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Individual Feature Styling */
+.feature {
+  padding-top: 15px;
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white with dark theme */
+  text-align: center;
+  max-width: 250px;
+  width: 220px;
+  height: 220px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Slight, permanent shadow */
+  transition: box-shadow 0.3s, transform 0.3s;
+  opacity: 0; /* Start with the feature invisible */
+  animation: fadeInUpFeature 1.5s ease-out forwards; /* Apply the animation */
+  animation-delay: 0.5s; /* Add a slight delay to each feature */
+}
+
+.feature img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #bbb;
+}
+
+/* Hover Effect */
+.feature:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Feature Icon Styles */
+.feature-icon {
+  font-size: 50px;  /* Set the size of the icons */
+  color: #ffcc00; /* Icon color */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.feature-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}

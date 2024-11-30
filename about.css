@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #000000ea; /* Dark background */
+}
+
+.shop-name {
+  font-family: 'Playfair Display', serif; /* Elegant and italic font */
+  font-size: 2.5em;
+  font-weight: 400;  /* Light weight for a clean and modern look */
+  color: #ffcc00; /* You can adjust the color to fit your design */
+  font-style: italic; /* Italic for that elegant touch */
+  letter-spacing: 2px; /* Slight spacing to make it feel airy and refined */
+}
+
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #0000001e; /* Solid dark color */
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: -20px;
+  margin-top: -0px;
+  font-size: 16px;
+  font-weight: 2;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logo h2 {
+  font-size: 1.8em;
+}
+
+
+/* Navigation Sign-In Button */
+.signin-button {
+  padding: 8px 16px;
+  height: 40px;
+  background-color: #1c1c1c;  /* Dark blue background */
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.signin-button:hover {
+  background-color: #444444;  /* Darker blue on hover */
+}
+
+.about {
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 40px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #FFD700; /* Golden color to match the theme and attract attention */
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #FFD700; /* Golden color for subheadings */
+  margin-top: 30px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #bbb; /* Light gray for easy reading */
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0;
+  margin: 20px 0;
+}
+
+ul li {
+  font-size: 1.2em;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+ul li::before {
+  content: "✔ "; /* Add checkmark before each item */
+  color: #FFD700; /* Golden color for checkmark */
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #8b0b0b; /* Dark text color for the link */
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="product.css"> <!-- Link the product-specific CSS -->
+</head>
+
+<body>
+
+  <!-- Add this link in the <head> of your HTML to import the font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <span class="shop-name">Shop X</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="Add to cart.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="sign in.html" class="signin-button">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar Filter -->
+  <aside class="filter-sidebar">
+    <h3>Filter Products</h3>
+
+    <!-- Price Filter -->
+    <div class="filter-section" id="price-filter">
+      <h4>Price</h4>
+      <div class="dual-range">
+        <input type="range" min="0" max="200" value="0" id="price-min-range">
+        <input type="range" min="0" max="200" value="200" id="price-max-range">
+      </div>
+      <div class="range-values">
+        <span id="selected-min">$0</span><span id="selected-max">$200</span>
+      </div>
+    </div>
+
+    <!-- Size Filter -->
+    <div class="filter-section" id="size-filter">
+      <h4>Size</h4>
+      <div class="size-options">
+        <button id="size-s">S</button>
+        <button id="size-m">M</button>
+        <button id="size-l">L</button>
+        <button id="size-xl">XL</button>
+      </div>
+    </div>
+
+    <!-- Brand Filter -->
+    <div class="filter-section" id="brand-filter">
+      <h4>Brand</h4>
+      <select id="brand-select">
+        <option value="nike">Nike</option>
+        <option value="adidas">Adidas</option>
+        <option value="puma">Puma</option>
+        <option value="reebok">Reebok</option>
+      </select>
+    </div>
+  </aside>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="nike-1" class="image" data-brand="nike">
+        <img id="image-37" class="imageStyle" src="assets/images/37.jpg" alt="T-shirt">
+        <p id="nike-product-0">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size1">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price1" data-price="99.99">$99.99</span></p>
+        <button id="add-btn-1" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="nike-2" class="image" data-brand="nike">
+        <img id="image-38" class="imageStyle" src="assets/images/38.jpg" alt="T-shirt">
+        <p id="nike-product-1">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size2">Size: S</span> <span class="rating" id="rating2">4.7⭐</span> <span
+            class="price" id="price2" data-price="49.99">$49.99</span></p>
+        <button id="add-btn-2" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="adidas-1" class="image" data-brand="adidas">
+        <img id="image-25" class="imageStyle" src="assets/images/25.jpg" alt="T-shirt">
+        <p id="adidas-product-1">Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size3">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price3" data-price="9.99">$9.99</span></p>
+        <button id="add-btn-3" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="reebok-1" class="image" data-brand="reebok">
+        <img id="image-26" class="imageStyle" src="assets/images/26.jpg" alt="T-shirt">
+        <p id="reebok-product-1">Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size4">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price4" data-price="19.99">$19.99</span></p>
+        <button id="add-btn-4" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="puma-1" class="image" data-brand="puma">
+        <img id="image-5" class="imageStyle" src="assets/images/5.jpg" alt="T-shirt">
+        <p id="puma-product-1">Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size5">Size: L</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price5" data-price="49.99">$49.99</span></p>
+        <button id="add-btn-5" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="nike-3" class="image" data-brand="nike">
+        <img id="image-6" class="imageStyle" src="assets/images/6.jpg" alt="T-shirt">
+        <p id="nike-product-2">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size6">Size: XL</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price6" data-price="11.99">$11.99</span></p>
+        <button id="add-btn-6" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="adidas-2" class="image" data-brand="adidas">
+        <img id="image-9" class="imageStyle" src="assets/images/9.jpg" alt="T-shirt">
+        <p id="adidas-product-2">Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size9">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price9" data-price="10.99">$10.99</span></p>
+        <button id="add-btn-9" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="puma-2" class="image" data-brand="puma">
+        <img id="image-10" class="imageStyle" src="assets/images/10.jpg" alt="T-shirt">
+        <p id="puma-product-2">Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size10">Size: S</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price10" data-price="18.99">$18.99</span></p>
+        <button id="add-btn-10" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="reebok-2" class="image" data-brand="reebok">
+        <img id="image-11" class="imageStyle" src="assets/images/11.jpg" alt="T-shirt">
+        <p id="reebok-product-3">Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size11">Size: XL</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price11" data-price="99.99">$99.99</span></p>
+        <button id="add-btn-11" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="nike-4" class="image" data-brand="nike">
+        <img id="image-12" class="imageStyle" src="assets/images/12.jpg" alt="T-shirt">
+        <p id="nike-product-4">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size12">Size: L</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price12" data-price="59.99">$59.99</span></p>
+        <button id="add-btn-12" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="puma-3" class="image" data-brand="puma">
+        <img id="image-13" class="imageStyle" src="assets/images/13.jpg" alt="T-shirt">
+        <p id="puma-product-3">Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size13">Size: S</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price13" data-price="79.99">$79.99</span></p>
+        <button id="add-btn-13" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="adidas-3" class="image" data-brand="adidas">
+        <img id="image-14" class="imageStyle" src="assets/images/14.jpg" alt="T-shirt">
+        <p id="adidas-product-3">Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size14">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price14" data-price="39.99">$39.99</span></p>
+        <button id="add-btn-14" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="adidas-4" class="image" data-brand="adidas">
+        <img id="image-15" class="imageStyle" src="assets/images/15.jpg" alt="T-shirt">
+        <p id="adidas-product-4">Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size15">Size: XL</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price15" data-price="49.99">$49.99</span></p>
+        <button id="add-btn-15" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="puma-4" class="image" data-brand="puma">
+        <img id="image-16" class="imageStyle" src="assets/images/16.jpg" alt="T-shirt">
+        <p id="puma-product-4">Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size16">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price16" data-price="12.99">$12.99</span></p>
+        <button id="add-btn-16" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="puma-5" class="image" data-brand="puma">
+        <img id="image-17" class="imageStyle" src="assets/images/17.jpg" alt="T-shirt">
+        <p id="puma-product-5">Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size17">Size: L</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price17" data-price="59.99">$59.99</span></p>
+        <button id="add-btn-17" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="adidas-5" class="image" data-brand="adidas">
+        <img id="image-18" class="imageStyle" src="assets/images/18.jpg" alt="T-shirt">
+        <p id="adidas-product-5">Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size18">Size: S</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price18" data-price="99.99">$99.99</span></p>
+        <button id="add-btn-18" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="nike-5" class="image" data-brand="nike">
+        <img id="image-19" class="imageStyle" src="assets/images/19.jpg" alt="T-shirt">
+        <p id="nike-product-5">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size19">Size: L</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price19" data-price="79.99">$79.99</span></p>
+        <button id="add-btn-19" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="nike-6" class="image" data-brand="nike">
+        <img id="image-20" class="imageStyle" src="assets/images/20.jpg" alt="T-shirt">
+        <p id="nike-product-6">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size20">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price20" data-price="29.99">$29.99</span></p>
+        <button id="add-btn-20" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="reebok-3" class="image" data-brand="reebok">
+        <img id="image-21" class="imageStyle" src="assets/images/21.jpg" alt="T-shirt">
+        <p id="reebok-product-4">Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size21">Size: L</span> <span class="rating" id="rating21">4.7⭐</span> <span
+            class="price" id="price21" data-price="52.99">$52.99</span></p>
+        <button id="add-btn-21" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="puma-6" class="image" data-brand="puma">
+        <img id="image-22" class="imageStyle" src="assets/images/22.jpg" alt="T-shirt">
+        <p id="puma-product-6">Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size22">Size: M</span> <span class="rating" id="rating22">4.7⭐</span> <span
+            class="price" id="price22" data-price="37.99">$37.99</span></p>
+        <button id="add-btn-22" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="reebok-4" class="image" data-brand="reebok">
+        <img id="image-23" class="imageStyle" src="assets/images/23.jpg" alt="T-shirt">
+        <p id="reebok-product-5">Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size23">Size: XL</span> <span class="rating" id="rating23">4.7⭐</span> <span
+            class="price" id="price23" data-price="46.99">$46.99</span></p>
+        <button id="add-btn-23" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="adidas-6" class="image" data-brand="adidas">
+        <img id="image-24" class="imageStyle" src="assets/images/24.jpg" alt="T-shirt">
+        <p id="adidas-product-6">Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size24">Size: S</span> <span class="rating" id="rating24">4.7⭐</span> <span
+            class="price" id="price24" data-price="82.99">$82.99</span></p>
+        <button id="add-btn-24" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="reebok-5" class="image" data-brand="reebok">
+        <img id="image-25" class="imageStyle" src="assets/images/25.jpg" alt="T-shirt">
+        <p id="reebok-product-6">Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size25">Size: M</span> <span class="rating" id="rating25">4.7⭐</span> <span
+            class="price" id="price25" data-price="10.99">$10.99</span></p>
+        <button id="add-btn-25" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="puma-7" class="image" data-brand="puma">
+        <img id="image-26" class="imageStyle" src="assets/images/26.jpg" alt="T-shirt">
+        <p id="puma-product-7">Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size26">Size: XL</span> <span class="rating" id="rating26">4.7⭐</span> <span
+            class="price" id="price26" data-price="19.99">$19.99</span></p>
+        <button id="add-btn-26" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="adidas-7" class="image" data-brand="adidas">
+        <img id="image-27" class="imageStyle" src="assets/images/27.jpg" alt="T-shirt">
+        <p id="adidas-product-7">Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size27">Size: L</span> <span class="rating" id="rating27">4.7⭐</span> <span
+            class="price" id="price27" data-price="43.99">$43.99</span></p>
+        <button id="add-btn-27" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="nike-7" class="image" data-brand="nike">
+        <img id="image-28" class="imageStyle" src="assets/images/28.jpg" alt="T-shirt">
+        <p id="nike-product-7">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size28">Size: L</span> <span class="rating" id="rating28">4.7⭐</span> <span
+            class="price" id="price28" data-price="15.99">$15.99</span></p>
+        <button id="add-btn-28" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="puma-8" class="image" data-brand="puma">
+        <img id="image-29" class="imageStyle" src="assets/images/29.jpg" alt="T-shirt" data-brand="Puma">
+        <p>Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size29">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price29" data-price="180.99">$180.99</span></p>
+        <button id="add-btn-29" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="adidas-8" class="image" data-brand="adidas">
+        <img id="image-30" class="imageStyle" src="assets/images/30.jpg" alt="T-shirt" data-brand="Adidas">
+        <p>Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size30">Size: S</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price30" data-price="199.99">$199.99</span></p>
+        <button id="add-btn-30" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="reebok-6" class="image" data-brand="reebok">
+        <img id="image-31" class="imageStyle" src="assets/images/31.jpg" alt="T-shirt" data-brand="Reebok">
+        <p>Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size31">Size: S</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price31" data-price="145.99">$145.99</span></p>
+        <button id="add-btn-31" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="puma-9" class="image" data-brand="puma">
+        <img id="image-32" class="imageStyle" src="assets/images/32.jpg" alt="T-shirt" data-brand="Puma">
+        <p>Brand: Puma</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size32">Size: XL</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price32" data-price="11.99">$11.99</span></p>
+        <button id="add-btn-32" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="nike-8" class="image" data-brand="nike">
+        <img id="image-33" class="imageStyle" src="assets/images/33.jpg" alt="T-shirt" data-brand="Nike">
+        <p>Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size33">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price33" data-price="49.99">$49.99</span></p>
+        <button id="add-btn-33" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="nike-9" class="image" data-brand="nike">
+        <img id="image-34" class="imageStyle" src="assets/images/34.jpg" alt="T-shirt" data-brand="Nike">
+        <p>Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size34">Size: XL</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price34" data-price="99.99">$99.99</span></p>
+        <button id="add-btn-34" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="reebok-7" class="image" data-brand="reebok">
+        <img id="image-35" class="imageStyle" src="assets/images/35.jpg" alt="T-shirt" data-brand="Reebok">
+        <p>Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size35">Size: L</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price35" data-price="39.99">$39.99</span></p>
+        <button id="add-btn-35" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="reebok-8" class="image" data-brand="reebok">
+        <img id="image-36" class="imageStyle" src="assets/images/36.jpg" alt="T-shirt" data-brand="Reebok">
+        <p>Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size36">Size: S</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price36" data-price="55.99">$55.99</span></p>
+        <button id="add-btn-36" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="nike-10" class="image" data-brand="nike">
+        <img id="image-1" class="imageStyle" src="assets/images/1.jpg" alt="T-shirt" data-brand="Nike">
+        <p>Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size37">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price37" data-price="13.99">$13.99</span></p>
+        <button id="add-btn-37" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="adidas-9" class="image" data-brand="adidas">
+        <img id="image-2" class="imageStyle" src="assets/images/2.jpg" alt="T-shirt" data-brand="Adidas">
+        <p>Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size38">Size: L</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price38" data-price="79.99">$79.99</span></p>
+        <button id="add-btn-38" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="nike-11" class="image" data-brand="nike">
+        <img id="image-39" class="imageStyle" src="assets/images/39.jpg" alt="T-shirt">
+        <p id="nike-product-11">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size39">Size: S</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price39" data-price="10.99">$10.99</span></p>
+        <button id="add-btn-39" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="adidas-10" class="image" data-brand="adidas">
+        <img id="image-40" class="imageStyle" src="assets/images/40.jpg" alt="T-shirt">
+        <p id="adidas-product-10">Brand: Adidas</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size40">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price40" data-price="9.99">$9.99</span></p>
+        <button id="add-btn-40" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagesDiv2">
+    <div class="brand-products">
+      <div id="reebok-9" class="image" data-brand="reebok">
+        <img id="image-41" class="imageStyle" src="assets/images/41.jpg" alt="T-shirt">
+        <p id="reebok-product-10">Brand: Reebok</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size41">Size: XL</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price41" data-price="44.99">$49.99</span></p>
+        <button id="add-btn-41" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+
+      <div id="nike-12" class="image" data-brand="nike">
+        <img id="image-42" class="imageStyle" src="assets/images/42.jpg" alt="T-shirt">
+        <p id="nike-product-12">Brand: Nike</p>
+        <p>Title: Classic Cotton T-Shirt</p>
+        <p>Comfortable cotton T-shirt, perfect for everyday wear. Available in multiple colors and sizes.</p>
+        <p><span class="size" id="size42">Size: M</span> <span class="rating" id="rating1">4.7⭐</span> <span
+            class="price" id="price42" data-price="9.99">$9.99</span></p>
+        <button id="add-btn-42" class="add-to-cart-button">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="java.js"></script>
+
+</body>
+
+</html>

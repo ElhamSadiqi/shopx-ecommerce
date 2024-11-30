@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #121212fa; /* Dark background */
+  
+}
+
+.shop-name {
+  font-family: 'Playfair Display', serif; /* Elegant and italic font */
+  font-size: 2.5em;
+  font-weight: 400;  /* Light weight for a clean and modern look */
+  color: #ffcc00; /* You can adjust the color to fit your design */
+  font-style: italic; /* Italic for that elegant touch */
+  letter-spacing: 2px; /* Slight spacing to make it feel airy and refined */
+}
+
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #00000025;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logo h2 {
+  font-size: 1.8em;
+}
+
+
+/* Navigation Sign-In Button */
+.signin-button {
+  padding: 8px 16px;
+  background-color: #1c1c1c;  /* Dark blue background */
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.signin-button:hover {
+  background-color: #444444;  /* Darker blue on hover */
+}
+
+/* Contact Container */
+.contact-container {
+  margin-top: 125px;
+  margin-left: 440px;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  color: #fff; /* Light text for contrast on dark background */
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Paragraph Text */
+p {
+  color: #ccc; /* Lighter gray for less contrast but still readable */
+  margin-bottom: 20px;
+}
+
+/* Input Labels */
+.input-group label {
+  text-align: left;
+  font-size: 12px;
+  color: #ddd; /* Soft white for labels */
+}
+
+/* Input Fields and Textarea */
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #c7c4c4; /* Dark text for input fields */
+  background-color: #2c2c2c; /* Slightly darker input background */
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 10px;
+  background-color: #ffcc00;
+  border: none;
+  color: #222; /* Dark text for the button */
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e6b800;
+}
+
+/* Social Media Links */
+.social-links {
+  margin-top: 15px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: #fff; /* White icons for better visibility */
+  font-size: 24px;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffcc00;
+}

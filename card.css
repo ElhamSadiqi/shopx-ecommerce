@@ -1,0 +1,137 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #121212fa; /* Dark background */
+}
+
+.shop-name {
+  font-family: 'Playfair Display', serif; /* Elegant and italic font */
+  font-size: 2.5em;
+  font-weight: 400;  /* Light weight for a clean and modern look */
+  color: #ffcc00; /* You can adjust the color to fit your design */
+  font-style: italic; /* Italic for that elegant touch */
+  letter-spacing: 2px; /* Slight spacing to make it feel airy and refined */
+}
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #00000025;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logo h2 {
+  font-size: 1.8em;
+}
+
+/* Navigation Sign-In Button */
+.signin-button {
+  padding: 8px 16px;
+  background-color: #1c1c1c;  /* Dark blue background */
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.signin-button:hover {
+  background-color: #444444;  /* Darker blue on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0f0f0f; /* Slightly lighter gray */
+  color: #ccc;
+  text-align: center;
+  padding: 0.4rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 2px solid #444; /* Subtle top border for definition */
+}
+
+#cart-container {
+  margin-left: 20px;
+  margin-top: 115px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+ 
+}
+
+.cart-item {
+  width: 300px;
+  text-align: center;
+  background-color: #910808;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.cart-item .price {
+  font-weight: bold;
+}
+
+.add-to-cart-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+  margin: 0 20px;
+}

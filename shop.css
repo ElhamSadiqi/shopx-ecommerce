@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #121212fa; /* Dark background */
+  
+}
+
+.shop-name {
+  font-family: 'Playfair Display', serif; /* Elegant and italic font */
+  font-size: 2.5em;
+  font-weight: 400;  /* Light weight for a clean and modern look */
+  color: #ffcc00; /* You can adjust the color to fit your design */
+  font-style: italic; /* Italic for that elegant touch */
+  letter-spacing: 2px; /* Slight spacing to make it feel airy and refined */
+}
+
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #00000025;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logo h2 {
+  font-size: 1.8em;
+}
+
+
+/* Navigation Sign-In Button */
+.signin-button {
+  padding: 8px 16px;
+  background-color: #1c1c1c;  /* Dark blue background */
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.signin-button:hover {
+  background-color: #444444;  /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Heading Styles */
+.h1, .h2 {
+  text-align: center;
+  color: white;
+  margin: 15px 0;
+  opacity: 0; /* Start with the text invisible */
+  transform: translateY(30px); /* Start by moving the text down */
+  animation: fadeInUp 1s forwards; /* Apply the animation */
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start with the text below its normal position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End with the text in its normal position */
+  }
+}
+
+/* Individual headings can have different timings */
+.h1 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 70px;
+  animation-delay: 0.3s; /* Delay the animation for h1 */
+}
+
+.h2 {
+  font-size: 20px;
+  animation-delay: 0.6s; /* Delay the animation for h2 */
+}
+
+/* Picture Div and Image Styles */
+.picDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pic {
+  width: 70px; /* Initial size of each image */
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 0 5px; /* Gap between images */
+  transition: width 0.3s ease-in-out;
+}
+
+.pic:hover {
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Soft white shadow */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0f0f0f; /* Slightly lighter gray */
+  color: #ccc;
+  text-align: center;
+  padding: 0.4rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 2px solid #444; /* Subtle top border for definition */
+}
+

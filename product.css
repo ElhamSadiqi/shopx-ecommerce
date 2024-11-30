@@ -1,0 +1,322 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #121212fa; /* Dark background */
+  
+}
+
+.shop-name {
+  font-family: 'Playfair Display', serif; /* Elegant and italic font */
+  font-size: 2.5em;
+  font-weight: 400;  /* Light weight for a clean and modern look */
+  color: #ffcc00; /* You can adjust the color to fit your design */
+  font-style: italic; /* Italic for that elegant touch */
+  letter-spacing: 2px; /* Slight spacing to make it feel airy and refined */
+}
+
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #00000025;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+  transition: top 0.3s ease; /* Smooth transition when the navbar hides/shows */
+
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logo h2 {
+  font-size: 1.8em;
+}
+
+
+/* Navigation Sign-In Button */
+.signin-button {
+  padding: 8px 16px;
+  background-color: #1c1c1c;  /* Dark blue background */
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.signin-button:hover {
+  background-color: #444444;  /* Darker blue on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1f1f1f;
+  color: #ccc;
+  text-align: center;
+  padding: 0.1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Filter Sidebar Styles */
+.filter-sidebar {
+  width: 250px;
+  padding: 25px;
+  margin-top: -38px;
+  background: linear-gradient(145deg, #333, #444);
+  color: white;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.filter-sidebar h3 {
+  font-size: 24px;
+  color: #ffcd3c;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.filter-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffcd3c;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.size-options button {
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #555;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.color-options {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.color-swatch {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  transition: transform 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.color-swatch:hover {
+  transform: scale(1.2);
+  border-color: #ffcd3c;
+}
+.brand-products {
+  display: grid; /* Ensures a grid layout */
+  grid-template-columns: 400px 200px;
+  gap: 20px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.brand-products.visible {
+  visibility: visible;
+  opacity: 1;
+  position: static; /* Restore default positioning */
+}
+
+
+/* Images Grid Styles */
+.imagesDiv2 {
+  margin-top: 120px;
+  margin-left: 200px;
+  display: grid;
+  grid-template-columns: 450px 300px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.image {
+  background-color: #2d2d2d;
+  padding-top: 20px;
+  width: 280px;
+  height: 495px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.imageStyle {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ccc;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ffcd3c;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #e5b136;
+  transform: scale(1.05);
+}
+
+.add-to-cart-button {
+  background-color: #ffcc00;
+  color: #121212;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #e0b700; /* Darken on hover */
+}
+
+/* Styling for the active button */
+#size-filter .size-options button.active {
+  background-color: #000000; /* Highlight color */
+  color: white;             /* Text color */
+  font-weight: bold;        /* Emphasized text */
+  border: 2px solid #000000; /* Optional border for better visibility */
+}
+
+/* Align the two sliders horizontally */
+.dual-range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 5px;
+}
+
+.dual-range input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  position: relative;
+}
+
+.dual-range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffcd3c;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+}

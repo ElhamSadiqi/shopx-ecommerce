@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Affordable & Trendy Products – Fast Shipping & Great Prices</title>
+  <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    
+<!-- Add this link in the <head> of your HTML to import the font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <span class="shop-name">Shop X</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="Add to cart.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="sign in.html" class="signin-button">Sign In</a>
+      </div>
+    </div>
+  </header>
+  
+  <div id="cart-container">
+    <!-- Product Display Area -->
+    <img id="product-image" src="" alt="Product Image" />
+    <p id="product-brand"></p>
+    <p id="product-title"></p>
+    <p id="product-size"></p>
+    <p id="product-price"></p>
+  
+    <!-- Navigation Buttons -->
+    <button id="prev-btn">&lt;</button>
+    <button id="next-btn">&gt;</button>
+  </div>
+  
+  
+  
+  <!-- Footer (if needed) -->
+  <footer>
+    <p>© 2024 Your Store</p>
+  </footer>
+
+  <script>
+
+// Retrieve cart from localStorage and initialize currentIndex
+let cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+let currentIndex = 0;
+
+// HTML elements to display product information
+const productImage = document.getElementById("product-image");
+const productBrand = document.getElementById("product-brand");
+const productTitle = document.getElementById("product-title");
+const productSize = document.getElementById("product-size");
+const productPrice = document.getElementById("product-price");
+
+// Function to display product at the current index
+function displayProduct(index) {
+  if (cartProducts.length === 0) {
+    alert("No products in the cart!");
+    return;
+  }
+  
+  const product = cartProducts[index];
+  productImage.src = product.image;
+  productBrand.textContent = `Brand: ${product.brand}`;
+  productTitle.textContent = `Title: ${product.title}`;
+  productSize.textContent = `Size: ${product.size}`;
+  productPrice.textContent = product.price;
+}
+
+// Initial display
+if (cartProducts.length > 0) {
+  displayProduct(currentIndex);
+}
+
+// Next button - navigate to the next product
+document.getElementById('next-btn').onclick = function() {
+  if (currentIndex < cartProducts.length - 1) {
+    currentIndex++;
+    displayProduct(currentIndex);
+  } else {
+    alert("You're already at the last product!");
+  }
+};
+
+// Previous button - navigate to the previous product
+document.getElementById('prev-btn').onclick = function() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    displayProduct(currentIndex);
+  } else {
+    alert("You're already at the first product!");
+  }
+};
+
+
+  </script>
+</body>
+</html>

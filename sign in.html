@@ -24,5 +24,22 @@
       </form>
     </div>
   </div>
+
+
+  <script>
+    
+  document.querySelector('.signin-btn').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent form submission
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Save data to localStorage
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+
+    alert('Credentials saved locally!');
+  });
+
+  </script>
 </body>
 </html>

